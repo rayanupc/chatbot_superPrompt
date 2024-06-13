@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Coding inspired by CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ChatBot SuperPrompt</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+  </head>
+  <body>
+    <!-- Sidebar container -->
+    <div class="side-bar">
+      <div class="title">
+        <h1>Super Prompt</h1>
+        <hr class="title-bar" size="2" width="70%">
+      </div>
+      <!-- Side bar options -->
+      <div class="select-opt">
+        <input type="checkbox" id="secure-mode" name="options" value="secure-mode">
+        <label for="secure-mode">Secure Mode</label><br>
+        <hr class="separation" size="2" width="85%">
+        <select id="enrichment-type">
+          <option value="none">Enrichment Type...</option>
+          <option disabled value="llm-chatgpt">LLM Enrichment (ChatGPT)</option>
+          <option selected value="llm-local">LLM Enrichment (Local)</option>
+          <option value="keywords">Predefined prompts</option>
+        </select>
+        <select id="rag-type">
+          <option value="none" selected>Knowledge Type...</option>
+          <option disabled value="pdf">File Manager</option>
+          <option disabled value="internet">Internet Search</option>
+        </select>
+        <br>
+        <label for="chatgpt-apikey">ChatGPT API Key</label>
+        <input type="password" id="chatgpt-apikey" name="chatgpt-apikey">
+        <select id="llm-type">
+          <option value="none">LLM Type...</option>
+          <option selected value="proxy">Intelligent Chabot</option>
+          <option value="mistral">Mistral</option>
+          <option disabled value="chatgpt">Chat GPT</option>
+          <option value="llama">Llama</option>
+          <option value="coral">Coral</option>
+        </select>
+      </div>
+      <!-- Side bar History / Archive container -->
+      <hr class="separation" size="2" width="85%">
+      <div class="archive">
+        <div class="archive-container">
+            <div id="archive-btn-1" class="archive-btn-selected" onclick="archiveButtonSelection(this)">
+                Chat 1
+            </div>
+        </div>
+        <div class="archive-add-btn">
+            + Add conversation
+        </div>
+      </div>
+      <a href="more-details.html" class="link">More details</a>
+    </div>
+    <div class="content">
+      <!-- Chats container -->
+      <div class="chat-container"></div>
+      
+      <!-- Typing container -->
+      <div class="typing-container">
+        <div class="typing-content">
+          <div class="typing-textarea">
+            <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+          </div>
+          <div class="typing-controls">
+            <span id="delete-btn" class="material-symbols-rounded">delete</span>
+            <div id="upload-file-icon" class="icons">
+              <span id="upload-file-btn" class="material-symbols-rounded">upload_file</span>
+              <div id="upload-file-tooltip" class="tooltip">Upload files here</div>
+              <input class="file-input" name="files" type="file" accept=".pdf,.mp4" multiple hidden>
+            </div>
+            <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,23 @@
+google==3.0.0
+openai==1.10.0
+flask==3.0.2 # Api
+flask_cors== 4.0.0 # Api
+spacy==3.7.4
+rake_nltk==1.0.6
+langchain==0.1.6
+transformers==4.40.1
+sentence-transformers==2.7.0
+chromadb==0.5.0 # RAG BDDv
+chardet==5.2.0 # uft-8 encoding
+bs4==0.0.2 # Scrapping
+PyMuPDF==1.24.2 # pdf to text
+litellm==1.32.1 # Proxy
+pinecone==4.0.0 # Rag
+moviepy==1.0.3 # mp4 to Rag
+fitz==0.0.1.dev2 # pdf to text
+frontend==0.0.3
+langchain_openai==0.0.6
+langchain_text_splitters==0.0.1
+fuzzywuzzy==0.18.0 
+python-Levenshtein==0.25.1
+langdetect==1.0.9
